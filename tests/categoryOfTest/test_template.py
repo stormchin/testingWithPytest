@@ -1,16 +1,24 @@
+
+import sys, os, inspect
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+parentOfParentDir = os.path.dirname(parentdir)
+
+#Allows imports from source folder.
+sys.path.append(parentOfParentDir)
+
 #!!!!!!!!!!!!!!!!!!!!!!!!name of file has to start with test_ !!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #import pytest necessary in testing file
 import pytest
 
-#!!!!!!!!!!!!!!!!! NAME OF MODULE/FILE YOU ARE TESTING !!!!!!!!!!!!!!!!!!!!!!
+#!!!!!!!!!!!!!!!!! NAME OF MODULE/FILE YOU ARE TESTING FROM THE FOLDER YOU ARE TESTING FROM!!!!!!!!!!!!!!!!!!!!!!
 #Ex if you are testing data_gen.py do import data_gen
-import template  
+from categoryOfFunctions import template  
 
 
-#Need comments explaing what is being tested
-#Mark allows groups of tests to be run from command line
-# @pytest.mark.NAMEOFMARK
+#Good practice to exapline in comments what is being tested
 
 #!!!!!!!!!!!!!!!!!!!!! Test functions must use test_NAME convention or pytest will not run test !!!!!!!!!!!!!!!!!!!!
 
@@ -18,20 +26,27 @@ import template
 # Test subtract function that is in template that is supposed to 
 # return a - b when given (a,b)
 #---------------------------------------------
+
+#Mark allows groups of tests to be run from command line
+# @pytest.mark.NAMEOFMARK
+
 @pytest.mark.calculations
 def test_subtract():
 	assert template.subtract(3,2) == 1
 
+@pytest.fixture
+def addToThree():
+	x = 3
+	return x
+
 
 #---------------------------------------------
-# Test addToThree function in template that is supposed to 
-# return a + 3 when given (a)
+# addToThree is run as a fixture function 
+# return value can be passed into test and used later
 #---------------------------------------------
-def test_addThree():
-	assert template.addToThree(7) == 10
 
-def test_variableInAddToThree(template.addToThree):
-	assert template.addToThree  == 3
+def test_variableInAddToThree(addToThree):
+	assert (addToThree + 4) == 7
 
 
 #====== RESOURCES =========
