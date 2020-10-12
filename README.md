@@ -1,24 +1,13 @@
 # testingWithPytest
 Testing resources for hume-iccae project
 
-### Structure
+### Current Folder Structure
 
 ```python
-───.pytest_cache
-│   └───v
-│       └───cache
-├───anotherCategoryOfFunctions
-│   ├───divisionFunctions
-│   │   └───__pycache__
-│   ├───multiplicationFunctions
-│   │   └───__pycache__
-│   └───__pycache__
-├───categoryOfFunctions
-│   └───__pycache__
-├───tests
-│   ├───anotherCategoryOfTests
-│   │   └───__pycache__
-│   └───categoryOfTest
-│       └───__pycache__
-└───__pycache__
+
 ```
+
+
+### How To Create a Test
+
+<img src="https://headlesstesting.com/assets/blog/2020/08/xpytest-ff7024fe91bfbe468ee6d515272ed904829eccdc02b7fd757e1ecc0bd5a9f4fc.png.pagespeed.ic.jaL31NSKZ6.webp" alt="mypy logo" width="300px"/>
