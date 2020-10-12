@@ -20,14 +20,36 @@ Testing resources for HUME-ICCAE
 Testing files need to be in the test folder. In the test folder choose the sub folder that corresponds to your group or the type of test you want to create. For example, if your test has to do with data generation, put create your test file in the data_gen sup folder. Read below for the mandatory file naming convetions. 
 
 ### Syntax
+
 When creating test file with pytest you must prefix the file with test_ . If this is not done, the tests within the file will not run!!!!!
+
+# Import modules
+
+To access the fucntions you want to test, you must either have initalized the file as a module. If you have not or for some reason it isn't working properly, you can put the following code at the top of your code. 
+
+``` python
+import sys, os, inspect
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+parentOfParentDir = os.path.dirname(parentdir)
+
+#Allows imports from source folder.
+sys.path.append(parentOfParentDir)
+
+```
+
 ## Create a Testing Function
+
 Whithin your testing file, you must prefix each function with test_ .
+
 Example:
+
 ``` python
 def test_AddTwo():
   assert addition(2,2) == 4
 ```
+
 ### Syntax
 
 
