@@ -13,9 +13,13 @@ Testing resources for HUME-ICCAE
 
 # How To Create a Test
 [Create a Testing File](##Create-a-Testing-File)
+
 [Create a Testing Function](##Create-a-Testing-Function)
+
 ## Create a Testing File
+Testing files need to be in the test folder. In the test folder choose the sub folder that corresponds to your group or the type of test you want to create. For example, if your test has to do with data generation, put create your test file in the data_gen sup folder. Read below for the mandatory file naming convetions. 
 ### Syntax
+
 ## Create a Testing Function
 ### Syntax
 
