@@ -3,7 +3,7 @@ Testing resources for HUME-ICCAE
 <img src="https://headlesstesting.com/assets/blog/2020/08/xpytest-ff7024fe91bfbe468ee6d515272ed904829eccdc02b7fd757e1ecc0bd5a9f4fc.png.pagespeed.ic.jaL31NSKZ6.webp" alt="mypy logo" width="300px"/>
 
 # Contents
-[Run Tests])(#Commands-To-Run-Tests)
+[Commands To Run Tests](#Commands-To-Run-Tests)
 
 [How to Create a Test](#How-To-Create-a-Test)
 
@@ -12,6 +12,8 @@ Testing resources for HUME-ICCAE
 [Create Fixtures](#Create-Fixtures)
 
 [Resources](#Resources)
+
+# Commands To Run Tests
 
 # How To Create a Test
 [Create a Testing File](##Create-a-Testing-File)
@@ -55,10 +57,78 @@ def test_AddTwo():
   assert addition(2,2) == 4
 ```
 
+### Commenting 
+
+In an open source project, it is good practice to comment above your tests so others can understand later. This will allow a problem to be easily diagnosed if the test fails in the future. Below is an example of good commenting procedure.  
+
+``` python
+from parentDir import file
+import pytest 
+
+# =============================================================================
+#  Checks addition( a: int a, b: int ) to see if it accurately adds two numbers greater than 0. 
+#  
+#==============================================================================
+def test_AddTwo():
+  assert file.addition(2,2) == 4
+  
+# ======================================================================================
+#  Checks subtraction(a: int, b: int) to see if it accurately subtracts two numbers greater than 0. 
+#  
+#=======================================================================================
+def test_SubTwo():
+  assert file.subtraction(2,2) == 4
+  
+```
 
 # Mark Tests
+Putting markers on a functions allows all the makred tests to be grouped during runtime. Examples, commands, and more information found below. 
+
+### Registering a Marker
+You cannot just create a random marker an use it. You must register a marker with pytest by doing the follwing. In the pytest.ini file you should see the follwing:
+
+``` python
+[pytest]
+testpaths = tests
+markers =
+    calculations: mark a test as a calculation.
+    multiplication: mark a test a multiplication function.
+    division: mark a test as a division function.
+```
+
+The calculations, multiplication, and division are all markers I have registered. To register a marker with pytest, open this file and add your own markers like so:
+
+``` python
+[pytest]
+testpaths = tests
+markers =
+    calculations: mark a test as a calculation.
+    multiplication: mark a test a multiplication function.
+    division: mark a test as a division function.
+    marker: mark a test with your own marker
+```
+
+If  you use a marker that is not registered, you may get an error or a warning. This may mess with your testing. It is highly reccomended to register markers in the configuration file. For the hume project, do not add any new markers without discussing it with your team. 
+
+### Using a Marker
+``` python
+import pytest 
+from calcFunctions import multiplication
+
+# ======================================================================================
+#  Checks multiplication(a: int, b: int) to see if it accurately multiplies two numbers greater than 0. 
+#  
+#=======================================================================================
+
+@pytest.mark.calculations
+def test_multiplicationFunc():
+    assert multiplication.multiplicationFunc(3,4) == 12
+
+
+```
 # Create Fixtures
 # Resources
+
 
 
 
