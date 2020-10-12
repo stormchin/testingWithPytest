@@ -87,7 +87,7 @@ Putting markers on a functions allows all the makred tests to be grouped during 
 ### Registering a Marker
 You cannot just create a random marker an use it. You must register a marker with pytest by doing the follwing. In the pytest.ini file you should see the follwing:
 
-``` python
+``` yaml
 [pytest]
 testpaths = tests
 markers =
@@ -98,7 +98,7 @@ markers =
 
 The calculations, multiplication, and division are all markers I have registered. To register a marker with pytest, open this file and add your own markers like so:
 
-``` python
+``` yaml
 [pytest]
 testpaths = tests
 markers =
