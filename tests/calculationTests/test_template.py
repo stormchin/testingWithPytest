@@ -61,11 +61,3 @@ def test_variableInAddToThree(addToThree):
 #
 
 
-# ---- Commands for running Tests -------
-#
-# With Marks:
-# All tests: 
-# Test in Folder: 
-# Tests in file:
-# One function with a specific name:
-# Functions with similar names: 

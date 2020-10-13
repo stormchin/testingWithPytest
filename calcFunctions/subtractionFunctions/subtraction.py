@@ -1,7 +1,6 @@
 #====================================================
-# Takes in two number a,b and returns the product a * b
+# Takes in two number a,b and returns the difference a - b
 #====================================================
 
-
-def multiplicationFunc(a,b):
-    return a*b
+def subtractTwo(a,b):
+    return a-b

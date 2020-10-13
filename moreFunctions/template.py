@@ -1,3 +1,7 @@
+
+# Good commenting practices for general functions
+
+
 #================================
 # Function takes two integer values subtracts them and returns intger answer.
 # Input: int a , int b
