@@ -277,8 +277,6 @@ Explore the repo! If you need to create a test, feel free to come back here and 
 
 [Custom Marks](https://docs.pytest.org/en/2.9.1/example/markers.html)
 
-[Paremetrization](https://docs.pytest.org/en/stable/parametrize.html)
-
-Allows you to input a variety of things and expect multiple outputs. Helpful for testing multiple test cases with one test function.
+[Paremetrization](https://docs.pytest.org/en/stable/parametrize.html):Allows you to input a variety of things and expect multiple outputs. Helpful for testing multiple test cases with one test function.
 
 
