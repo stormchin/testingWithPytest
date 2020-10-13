@@ -46,7 +46,7 @@ pytest test_NAME.py
 pytest -k "MyClass and not method"
 ```
 
-### Run Specifc Test by Marker
+###Run Specifc Test by Marker
 
 ```bash
 pytest -m markerName
