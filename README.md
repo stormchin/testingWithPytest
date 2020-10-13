@@ -223,29 +223,36 @@ The structure mimics the hume-iccae repo.
 
 Requirements: Must have python3 and pip installed. 
 
-**Step 1)** Clone the repo with this [link]()
+**Step 1)** 
+Clone the repo with this [link]()
 
 
-**Step 2)** Install the pytest module using pip
+**Step 2)** 
+Install the pytest module using pip
 
 
-**Step 3)** Open terminal and navigate to repo folder ~testingWithPytest/
+**Step 3)** 
+Open terminal and navigate to repo folder ~testingWithPytest/
 
 
-**Step 4)** Type the following command
+**Step 4)** 
+Type the following command
 
 ```bash
 pytest
 ```
 
-**Step 5)** Fix the failed tests! These tests include syntax errors and calculation errors. The comments should be good enough for you to fix what is wrong with the testing function as well as the function. 
+**Step 5)** 
+Fix the failed tests! These tests include syntax errors and calculation errors. The comments should be good enough for you to fix what is wrong with the testing function as well as the function. 
 
-**Step 6)** Check the pytest.ini file for all the registered markers. Run marked test using the following command.
+**Step 6)** 
+Check the pytest.ini file for all the registered markers. Run marked test using the following command.
 
 ```bash
 pytest -m nameOfMarker
 ```
-**Step 7)** Explore the repo! If you need to create a test, feel free to come back here and checkout the test_template.py file. 
+**Step 7)** 
+Explore the repo! If you need to create a test, feel free to come back here and checkout the test_template.py file. 
 
 
 # Resources
