@@ -15,6 +15,12 @@ Testing resources for HUME-ICCAE
 
 # Commands To Run Tests
 
+Run all tests in test folder
+
+```bash
+pytest
+```
+
 # How To Create a Test
 [Create a Testing File](##Create-a-Testing-File)
 
@@ -96,7 +102,7 @@ markers =
     division: mark a test as a division function.
 ```
 
-The calculations, multiplication, and division are all markers I have registered. To register a marker with pytest, open this file and add your own markers like so:
+The calculations, multiplication, and division are all markers I have registered in this repo. To register a marker with pytest, open this file (pytest.ini) and add your own markers like so:
 
 ``` yaml
 [pytest]
@@ -111,7 +117,13 @@ markers =
 If  you use a marker that is not registered, you may get an error or a warning. This may mess with your testing. It is highly reccomended to register markers in the configuration file. For the hume project, do not add any new markers without discussing it with your team. 
 
 ### Using a Marker
+
+When trying to mark a function, you must write a decorator before the function decleration.
+
+For example, if I would like to put a marker called multiplication on a test function I would put @pytest.mark.multiplication. You can also put multiple markers on one function as shown below. Make sure your markers are registered
+
 ``` python
+
 import pytest 
 from calcFunctions import multiplication
 
@@ -120,6 +132,7 @@ from calcFunctions import multiplication
 #  
 #=======================================================================================
 
+@pytest.mark.multiplication
 @pytest.mark.calculations
 def test_multiplicationFunc():
     assert multiplication.multiplicationFunc(3,4) == 12
