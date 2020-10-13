@@ -52,6 +52,8 @@ pytest -k "MyClass and not method"
 pytest -m markerName
 ```
 
+[More on Markers](#Mark-Tests)
+
 # How To Create a Test
 [Create a Testing File](#Create-A-Testing-File)
 
