@@ -53,9 +53,9 @@ pytest -m markerName
 ```
 
 # How To Create a Test
-[Create a Testing File](##Create-a-Testing-File)
+[Create a Testing File](##Create-A-Testing-File)
 
-[Create a Testing Function](##Create-a-Testing-Function)
+[Create a Testing Function](##Create-A-Testing-Function)
 
 ## Create a Testing File
 
