@@ -14,7 +14,7 @@ import pytest
 
 #!!!!!!!!!!!!!!!!! NAME OF MODULE/FILE YOU ARE TESTING FROM THE FOLDER YOU ARE TESTING FROM!!!!!!!!!!!!!!!!!!!!!!
 #Ex if you are testing data_gen.py do import data_gen
-from anotherCategoryOfFunctions.multiplicationFunctions import multiplication
+from calcFunctions.multiplicationFunctions import multiplication
 
 @pytest.mark.multiplication
 @pytest.mark.calculations

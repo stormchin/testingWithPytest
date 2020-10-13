@@ -14,9 +14,11 @@ import pytest
 
 #!!!!!!!!!!!!!!!!! NAME OF MODULE/FILE YOU ARE TESTING FROM THE FOLDER YOU ARE TESTING FROM!!!!!!!!!!!!!!!!!!!!!!
 #Ex if you are testing data_gen.py do import data_gen
-from anotherCategoryOfFunctions.divisionFunctions import division
+from calcFunctions.divisionFunctions import division
 
 @pytest.mark.division
 @pytest.mark.calculations
 def test_divisionFunc():
     assert division.divisionFunc(6,3) == 2
+
+    
