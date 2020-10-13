@@ -28,7 +28,7 @@ pytest
 
 ```bash
 
-pytest folder1/folder2
+pytest folder1/
 
 ```
 
@@ -151,7 +151,7 @@ If  you use a marker that is not registered, you may get an error or a warning. 
 
 When trying to mark a function, you must write a decorator before the function decleration.
 
-For example, if I would like to put a marker called multiplication on a test function I would put @pytest.mark.multiplication. You can also put multiple markers on one function as shown below. Make sure your markers are registered
+For example, if I would like to put a marker called multiplication on a test function I would put @pytest.mark.multiplication. You can also put multiple markers on one function as shown below. Make sure your markers are registered.
 
 ``` python
 
@@ -167,9 +167,8 @@ from calcFunctions import multiplication
 @pytest.mark.calculations
 def test_multiplicationFunc():
     assert multiplication.multiplicationFunc(3,4) == 12
-
-
 ```
+Run your marked test with this [command](###Run-Specifc-Test-by-Marker)
 # Create Fixtures
 # Resources
 
