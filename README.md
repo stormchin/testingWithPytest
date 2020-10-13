@@ -225,7 +225,7 @@ Requirements: Must have python3 and pip installed.
 
 **Step 1)** 
 
-Clone the repo with this [link]().
+Clone the repo with this [link](https://github.com/stormchin/testingWithPytest.git).
 
 
 **Step 2)** 
