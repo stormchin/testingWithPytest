@@ -15,7 +15,7 @@ Testing resources for HUME-ICCAE
 
 # Commands To Run Tests
 
-Run All Tests
+### Run All Tests
 
 ```bash
 
@@ -23,7 +23,7 @@ pytest
 
 ```
 
-Run Tests in a Directory
+### Run Tests in a Directory
 
 
 ```bash
@@ -32,7 +32,7 @@ pytest folder1/folder2
 
 ```
 
-Run Specific Test File
+### Run Specific Test File
 
 ```bash
 
@@ -40,13 +40,13 @@ pytest test_NAME.py
 
 ```
 
-Run Specific Test by Keyword
+### Run Specific Test by Keyword
 
 ```bash
 pytest -k "MyClass and not method"
 ```
 
-Run Specifc Test by Marker
+### Run Specifc Test by Marker
 
 ```bash
 pytest -m markerName
