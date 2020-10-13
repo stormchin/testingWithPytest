@@ -46,7 +46,7 @@ pytest test_NAME.py
 pytest -k "MyClass and not method"
 ```
 
-###Run Specifc Test by Marker
+### Run Specifc Test by Marker
 
 ```bash
 pytest -m markerName
@@ -168,7 +168,7 @@ from calcFunctions import multiplication
 def test_multiplicationFunc():
     assert multiplication.multiplicationFunc(3,4) == 12
 ```
-Run your marked test with this [command](###Run-Specifc-Test-by-Marker)
+Run your marked test with this [command](#Run-Specifc-Test-by-Marker)
 
 # Create Fixtures
 
