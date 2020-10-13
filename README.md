@@ -230,7 +230,11 @@ Clone the repo with this [link]().
 
 **Step 2)** 
 
-Install the pytest module using pip
+Install the pytest module using
+
+```bash
+pip install pytest
+```
 
 
 **Step 3)** 
