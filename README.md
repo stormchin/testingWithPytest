@@ -175,6 +175,16 @@ Run your marked test with this [command](#Run-Specifc-Test-by-Marker).
 
 # Create Fixtures
 
+Fixtures are functions, which will run before each test function to which it is applied. Fixtures are used to feed some data to the tests such as database connections, URLs to test, and some sort of input data. Therefore, instead of running the same code for every test, we can attach fixture function to the tests and it will run and return the data to the test before executing each test.
+
+Call a fixture by typing following above a function-
+
+``` python
+
+@pytest.fixture
+
+```
+
 # Pytest Demo
 
 # Resources
