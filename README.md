@@ -223,9 +223,15 @@ The structure mimics the hume-iccae repo.
 
 Requirements: Must have python3 and pip installed. 
 
-Step 1) Clone the repo with this link: 
+Step 1) Clone the repo with this [link0()
+
+
 Step 2) Install the pytest module using pip
+
+
 Step 3) Open terminal and navigate to repo folder ~testingWithPytest/
+
+
 Step 4) Type the following command
 
 ```bash
