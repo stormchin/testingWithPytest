@@ -11,6 +11,8 @@ Testing resources for HUME-ICCAE
 
 [Create Fixtures](#Create-Fixtures)
 
+[Repo Structure](#Repo-Structure)
+
 [Pytest Demo](#Pytest-Demo)
 
 [Resources](#Resources)
@@ -177,7 +179,7 @@ Run your marked test with this [command](#Run-Specifc-Test-by-Marker).
 
 Fixtures are functions, which will run before each test function to which it is applied. Fixtures are used to feed some data to the tests such as database connections, URLs to test, and some sort of input data. Therefore, instead of running the same code for every test, we can attach fixture function to the tests and it will run and return the data to the test before executing each test.
 
-Call a fixture by typing following above a function-
+Make function a fixture by typing following above a function-
 
 ``` python
 
@@ -185,7 +187,85 @@ Call a fixture by typing following above a function-
 
 ```
 
+You can now use the function name and pass it returns to other functions that you are testing!
+
+# Repo Structure
+
+The repo strucutre is as follows:
+
+```bash
+├───.pytest_cache
+│   └───v
+│       └───cache
+├───calcFunctions
+│   ├───additionFunctions
+│   ├───divisionFunctions
+│   │   └───__pycache__
+│   ├───multiplicationFunctions
+│   │   └───__pycache__
+│   ├───subtractionFunctions
+│   └───__pycache__
+├───moreFunctions
+│   └───__pycache__
+├───tests
+│   ├───badTestsFIXME
+│   │   └───__pycache__
+│   └───calculationTests
+│       └───__pycache__
+└───__pycache__
+
+```
+
+The structure mimics the hume-iccae repo.
+
+
+
 # Pytest Demo
+
+Requirements: Must have python3 and pip installed. 
+
+**Step 1)** 
+
+Clone the repo with this [link](https://github.com/stormchin/testingWithPytest.git).
+
+
+**Step 2)** 
+
+Install the pytest module using
+
+```bash
+pip install pytest
+```
+
+
+**Step 3)** 
+
+Open terminal and navigate to repo folder ~testingWithPytest/
+
+
+**Step 4)** 
+
+Type the following command
+
+```bash
+pytest
+```
+
+**Step 5)** 
+
+Fix the failed tests! These tests include syntax errors and calculation errors. The comments should be good enough for you to fix what is wrong with the testing function as well as the function. 
+
+**Step 6)** 
+
+Check the pytest.ini file for all the registered markers. Run marked test using the following command.
+
+```bash
+pytest -m nameOfMarker
+```
+**Step 7)** 
+
+Explore the repo! If you need to create a test, feel free to come back here and checkout the test_template.py file. 
+
 
 # Resources
 
@@ -196,5 +276,7 @@ Call a fixture by typing following above a function-
 
 
 [Custom Marks](https://docs.pytest.org/en/2.9.1/example/markers.html)
+
+[Paremetrization](https://docs.pytest.org/en/stable/parametrize.html): allows you to input a variety of things and expect multiple outputs. Helpful for testing multiple test cases with one test function.
 
 
