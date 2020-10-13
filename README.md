@@ -11,6 +11,8 @@ Testing resources for HUME-ICCAE
 
 [Create Fixtures](#Create-Fixtures)
 
+[Repo Structure](#Repo-Structure)
+
 [Pytest Demo](#Pytest-Demo)
 
 [Resources](#Resources)
@@ -177,7 +179,7 @@ Run your marked test with this [command](#Run-Specifc-Test-by-Marker).
 
 Fixtures are functions, which will run before each test function to which it is applied. Fixtures are used to feed some data to the tests such as database connections, URLs to test, and some sort of input data. Therefore, instead of running the same code for every test, we can attach fixture function to the tests and it will run and return the data to the test before executing each test.
 
-Call a fixture by typing following above a function-
+Make function a fixture by typing following above a function-
 
 ``` python
 
@@ -185,7 +187,34 @@ Call a fixture by typing following above a function-
 
 ```
 
+You can now use the function name and pass it returns to other functions that you are testing!
+
+# Repo Structure
+
+```bash
+
+├───.pytest_cache
+│   └───v
+│       └───cache
+├───calcFunctions
+│   ├───divisionFunctions
+│   │   └───__pycache__
+│   ├───multiplicationFunctions
+│   │   └───__pycache__
+│   └───__pycache__
+├───moreFunctions
+│   └───__pycache__
+├───tests
+│   ├───badTestsFIXME
+│   │   └───__pycache__
+│   └───calculationTests
+│       └───__pycache__
+└───__pycache__
+
+```
 # Pytest Demo
+
+
 
 # Resources
 
