@@ -168,12 +168,15 @@ from calcFunctions import multiplication
 def test_multiplicationFunc():
     assert multiplication.multiplicationFunc(3,4) == 12
 ```
-Run your marked test with this [command](#Run-Specifc-Test-by-Marker)
+Run your marked test with this [command](#Run-Specifc-Test-by-Marker).
 
 # Create Fixtures
 
+
 # Resources
 
-
+General Pytest Tutorials: https://www.youtube.com/watch?v=byaxg00Gf9I
+Fixtures: https://www.tutorialspoint.com/pytest/pytest_fixtures.htm#:~:text=Fixtures%20are%20functions%2C%20which%20will,some%20sort%20of%20input%20data.&text=A%20test%20function%20can%20use,name%20as%20an%20input%20parameter
+Custom Marks: https://docs.pytest.org/en/2.9.1/example/markers.html
 
 
